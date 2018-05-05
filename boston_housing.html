@@ -11803,7 +11803,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -11881,7 +11881,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Minimum price of the data</span>
@@ -11968,7 +11968,7 @@ Standard deviation of prices: $165171.13
 <ul>
 <li>增大RM，MEDV的数值会增大，因为房间多了，房屋可以使用的面积多了，所以房价会增大。</li>
 <li>增大LSTAT,MEDV的数值会减小，因为低收入阶层没有很多钱买房，所以房价会减小。</li>
-<li>增大PTRATIO,MEDV的数值会增大，因为离学校近的话，方便上学或者老师上班，所以房价会增大。</li>
+<li>增大PTRATIO,MEDV的数值会减小，因为说明学生多，老师少，教学质量和教学资源相对不好，所以房价会减小。</li>
 </ul>
 
 </div>
@@ -12001,7 +12001,7 @@ Standard deviation of prices: $165171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import &#39;r2_score&#39;</span>
@@ -12072,7 +12072,7 @@ Standard deviation of prices: $165171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Calculate the performance of this model</span>
@@ -12142,7 +12142,7 @@ Standard deviation of prices: $165171.13
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Import &#39;train_test_split&#39;</span>
@@ -12202,8 +12202,8 @@ Standard deviation of prices: $165171.13
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>分为训练集和测试集的好处是：可以更好的验证模型的准确性。</li>
-<li>训练集和测试集重合的坏处是：预测训练集的那部分数据准确率会很高，因为训练模型用的也是同样的数据。导致最终结果可能会虚高。</li>
+<li>分为训练集和测试集的好处是：通过比较模型在测试集和训练集的表现，我们能够知道模型是否出现了过拟合或者欠拟合，测试集评估模型在未知数据的泛化能力。</li>
+<li>训练集和测试集重合的坏处是：模型可能在训练集上表现很好，但却不能泛化到新的数据。</li>
 </ul>
 
 </div>
@@ -13322,6 +13322,7 @@ zMzMzHK8k2RmZmZmZpbjnSQzMzMzM7Oc/wGQisCyE4cuGAAAAABJRU5ErkJggg==
 <li>测试集的阴影区域较大，说明它有很大的不确定性。</li>
 <li>随着数据量的增加，训练集的评分逐渐增长，几乎不存在不确定性，在深度为6的时候趋于平稳，到深度为10的时候基本不变了。</li>
 <li>随着数据量的增加，测试集的评分逐渐增长，还是存在不确定性，但是在慢慢减小，在深度为3的时候就基本不变了。</li>
+<li>如果有更多的数据，会提升模型的表现，但不是显著提升。因为曲线已经稳定了。</li>
 </ul>
 
 </div>
@@ -13814,8 +13815,8 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>当模型以最大深度 1训练时，模型的预测出现了很大的偏差，因为R2分数低，欠拟合。</li>
-<li>当模型以最大深度 10训练时，模型的预测出现了很大的方差，因为训练集和测试集的曲线随着深度的增加，红色和绿色的曲线的间距越来越大，说明方差越来越大，高方差表示过拟合。</li>
+<li>当模型以最大深度1训练时，模型的预测出现了很大的偏差，因为R2分数低，欠拟合。</li>
+<li>当模型以最大深度10训练时，模型的预测出现了很大的方差，因为训练集和测试集的曲线随着深度的增加，红色和绿色的曲线的间距越来越大，说明方差越来越大，高方差表示过拟合。</li>
 </ul>
 
 </div>
@@ -13847,7 +13848,7 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>最大深度为4的模型能够更好预测。因为在图中深度4的时候红色和绿色的间距最小，说明训练集和测试集的方差较小，而且R2的值在深度为4的时候接近稳定了，再增加深度，R2增加的值也较小。</li>
+<li>最大深度为4的模型在验证集的表现最好。因为在图中深度4的时候红色和绿色的间距最小，说明训练集和测试集的方差较小，而且R2的值在深度为4的时候接近稳定了，再增加深度，R2增加的值也较小。</li>
 </ul>
 
 </div>
@@ -13924,12 +13925,12 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><strong>K折交叉验证法</strong>：K次交叉验证，将训练集分割成K个子样本，一个单独的子样本被保留作为验证模型的数据，其他K-1个样本用来训练。交叉验证重复K次，每个子样本验证一次，平均K次的结果或者使用其它结合方式，最终得到一个单一估测。这个方法的优势在于，同时重复运用随机产生的子样本进行训练和验证，每次的结果验证一次，10次交叉验证是最常用的。</li>
+<li><strong>K折交叉验证法</strong>：把数据集平均分成k份，一份被保留作为验证模型的数据，其他K-1份用来训练。交叉验证重复K次，每个k份验证一次，平均K次的结果，最终得到一个单一估测。</li>
 </ul>
 <hr>
 <ul>
 <li><strong>GridSearchCV 是如何结合交叉验证来完成对最佳参数组合的选择的？</strong><ul>
-<li>对每种参数进行一次交叉验证，重复K次，最后结果分数最高的，就是最佳参数组合。</li>
+<li>对每种参数进行一次交叉验证，重复K次，最后结果分数最高的（如果评分标准是loss，返回评分最低），就是最佳参数组合。</li>
 </ul>
 </li>
 <li><strong>GridSearchCV 中的cv_results_属性能告诉我们什么？</strong><ul>
@@ -13937,7 +13938,7 @@ AElFTkSuQmCC
 </ul>
 </li>
 <li><strong>网格搜索为什么要使用K折交叉验证？K折交叉验证能够避免什么问题？</strong><ul>
-<li>可以在一定程度上减小过拟合，对数据的划分不会特别敏感，还可以从有限的数据中获取尽可能多的有效信息。</li>
+<li>给出准确的评分，帮助网格搜索选择参数。</li>
 </ul>
 </li>
 </ul>
@@ -13965,7 +13966,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1">#  Import &#39;make_scorer&#39;, &#39;DecisionTreeRegressor&#39;, and &#39;GridSearchCV&#39;</span>
@@ -13987,7 +13988,7 @@ AElFTkSuQmCC
     <span class="n">regressor</span> <span class="o">=</span> <span class="n">DecisionTreeRegressor</span><span class="p">()</span>
 
     <span class="c1"># Create a dictionary for the parameter &#39;max_depth&#39; with a range from 1 to 10</span>
-    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_depth&quot;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">)}</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;max_depth&quot;</span><span class="p">:</span><span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">11</span><span class="p">)}</span>
 
     <span class="c1"># Transform &#39;performance_metric&#39; into a scoring function using &#39;make_scorer&#39; </span>
     <span class="n">scoring_fnc</span> <span class="o">=</span> <span class="n">make_scorer</span><span class="p">(</span><span class="n">performance_metric</span><span class="p">)</span>
@@ -13995,7 +13996,7 @@ AElFTkSuQmCC
     <span class="c1"># Create the grid search cv object --&gt; GridSearchCV()</span>
     <span class="c1"># Make sure to include the right parameters in the object:</span>
     <span class="c1"># (estimator, param_grid, scoring, cv) which have values &#39;regressor&#39;, &#39;params&#39;, &#39;scoring_fnc&#39;, and &#39;cv_sets&#39; respectively.</span>
-    <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">regressor</span><span class="p">,</span> <span class="n">scoring_fnc</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">cv_sets</span><span class="p">)</span>
+    <span class="n">grid</span> <span class="o">=</span> <span class="n">GridSearchCV</span><span class="p">(</span><span class="n">regressor</span><span class="p">,</span> <span class="n">params</span><span class="p">,</span> <span class="n">scoring_fnc</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="n">cv_sets</span><span class="p">)</span>
 
     <span class="c1"># Fit the grid search object to the data to compute the optimal model</span>
     <span class="n">grid</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -14030,7 +14031,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Fit the training data to the model using grid search</span>
@@ -14053,39 +14054,9 @@ AElFTkSuQmCC
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-21-e30351159ffc&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      1</span> <span class="ansi-red-intense-fg ansi-bold"># Fit the training data to the model using grid search</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 2</span><span class="ansi-yellow-intense-fg ansi-bold"> </span>reg <span class="ansi-yellow-intense-fg ansi-bold">=</span> fit_model<span class="ansi-yellow-intense-fg ansi-bold">(</span>X_train<span class="ansi-yellow-intense-fg ansi-bold">,</span> y_train<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">      3</span> 
-<span class="ansi-green-fg">      4</span> <span class="ansi-red-intense-fg ansi-bold"># Produce the value for &#39;max_depth&#39;</span>
-<span class="ansi-green-fg">      5</span> <span class="ansi-green-intense-fg ansi-bold">print</span><span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Parameter &#39;max_depth&#39; is {} for the optimal model.&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span>reg<span class="ansi-yellow-intense-fg ansi-bold">.</span>get_params<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">[</span><span class="ansi-blue-intense-fg ansi-bold">&#39;max_depth&#39;</span><span class="ansi-yellow-intense-fg ansi-bold">]</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-18-a1fa54fa87ef&gt;</span> in <span class="ansi-cyan-fg">fit_model</span><span class="ansi-blue-intense-fg ansi-bold">(X, y)</span>
-<span class="ansi-green-fg">     26</span>     <span class="ansi-red-intense-fg ansi-bold"># Make sure to include the right parameters in the object:</span>
-<span class="ansi-green-fg">     27</span>     <span class="ansi-red-intense-fg ansi-bold"># (estimator, param_grid, scoring, cv) which have values &#39;regressor&#39;, &#39;params&#39;, &#39;scoring_fnc&#39;, and &#39;cv_sets&#39; respectively.</span>
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 28</span><span class="ansi-yellow-intense-fg ansi-bold">     </span>grid <span class="ansi-yellow-intense-fg ansi-bold">=</span> GridSearchCV<span class="ansi-yellow-intense-fg ansi-bold">(</span>regressor<span class="ansi-yellow-intense-fg ansi-bold">,</span> scoring_fnc<span class="ansi-yellow-intense-fg ansi-bold">,</span> cv<span class="ansi-yellow-intense-fg ansi-bold">=</span>cv_sets<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">     29</span> 
-<span class="ansi-green-fg">     30</span>     <span class="ansi-red-intense-fg ansi-bold"># Fit the grid search object to the data to compute the optimal model</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\Anaconda2\lib\site-packages\sklearn\model_selection\_search.pyc</span> in <span class="ansi-cyan-fg">__init__</span><span class="ansi-blue-intense-fg ansi-bold">(self, estimator, param_grid, scoring, fit_params, n_jobs, iid, refit, cv, verbose, pre_dispatch, error_score, return_train_score)</span>
-<span class="ansi-green-fg">   1075</span>             return_train_score=return_train_score)
-<span class="ansi-green-fg">   1076</span>         self<span class="ansi-yellow-intense-fg ansi-bold">.</span>param_grid <span class="ansi-yellow-intense-fg ansi-bold">=</span> param_grid
-<span class="ansi-green-intense-fg ansi-bold">-&gt; 1077</span><span class="ansi-yellow-intense-fg ansi-bold">         </span>_check_param_grid<span class="ansi-yellow-intense-fg ansi-bold">(</span>param_grid<span class="ansi-yellow-intense-fg ansi-bold">)</span>
-<span class="ansi-green-fg">   1078</span> 
-<span class="ansi-green-fg">   1079</span>     <span class="ansi-green-intense-fg ansi-bold">def</span> _get_param_iterator<span class="ansi-yellow-intense-fg ansi-bold">(</span>self<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-green-intense-fg ansi-bold">D:\Anaconda2\lib\site-packages\sklearn\model_selection\_search.pyc</span> in <span class="ansi-cyan-fg">_check_param_grid</span><span class="ansi-blue-intense-fg ansi-bold">(param_grid)</span>
-<span class="ansi-green-fg">    345</span>         param_grid <span class="ansi-yellow-intense-fg ansi-bold">=</span> <span class="ansi-yellow-intense-fg ansi-bold">[</span>param_grid<span class="ansi-yellow-intense-fg ansi-bold">]</span>
-<span class="ansi-green-fg">    346</span> 
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 347</span><span class="ansi-yellow-intense-fg ansi-bold">     </span><span class="ansi-green-intense-fg ansi-bold">for</span> p <span class="ansi-green-intense-fg ansi-bold">in</span> param_grid<span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    348</span>         <span class="ansi-green-intense-fg ansi-bold">for</span> name<span class="ansi-yellow-intense-fg ansi-bold">,</span> v <span class="ansi-green-intense-fg ansi-bold">in</span> p<span class="ansi-yellow-intense-fg ansi-bold">.</span>items<span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">    349</span>             <span class="ansi-green-intense-fg ansi-bold">if</span> isinstance<span class="ansi-yellow-intense-fg ansi-bold">(</span>v<span class="ansi-yellow-intense-fg ansi-bold">,</span> np<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndarray<span class="ansi-yellow-intense-fg ansi-bold">)</span> <span class="ansi-green-intense-fg ansi-bold">and</span> v<span class="ansi-yellow-intense-fg ansi-bold">.</span>ndim <span class="ansi-yellow-intense-fg ansi-bold">&gt;</span> <span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-
-<span class="ansi-red-intense-fg ansi-bold">TypeError</span>: &#39;_PredictScorer&#39; object is not iterable</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Parameter &#39;max_depth&#39; is 4 for the optimal model.
+</pre>
 </div>
 </div>
 
@@ -14098,6 +14069,17 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#38382;&#39064; 9 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-9---&#22238;&#31572;&#65306;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>最优模型的最大深度是4,跟我猜测的一样。</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14147,7 +14129,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># Produce a matrix for client data</span>
@@ -14173,17 +14155,11 @@ AElFTkSuQmCC
 <div class="prompt"></div>
 
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-intense-fg ansi-bold">&lt;ipython-input-20-65bbef88850d&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span><span class="ansi-blue-intense-fg ansi-bold">()</span>
-<span class="ansi-green-fg">      5</span> 
-<span class="ansi-green-fg">      6</span> <span class="ansi-red-intense-fg ansi-bold"># Show predictions</span>
-<span class="ansi-green-intense-fg ansi-bold">----&gt; 7</span><span class="ansi-yellow-intense-fg ansi-bold"> </span><span class="ansi-green-intense-fg ansi-bold">for</span> i<span class="ansi-yellow-intense-fg ansi-bold">,</span> price <span class="ansi-green-intense-fg ansi-bold">in</span> enumerate<span class="ansi-yellow-intense-fg ansi-bold">(</span>reg<span class="ansi-yellow-intense-fg ansi-bold">.</span>predict<span class="ansi-yellow-intense-fg ansi-bold">(</span>client_data<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">:</span>
-<span class="ansi-green-fg">      8</span>     <span class="ansi-green-intense-fg ansi-bold">print</span><span class="ansi-yellow-intense-fg ansi-bold">(</span><span class="ansi-blue-intense-fg ansi-bold">&#34;Predicted selling price for Client {}&#39;s home: ${:,.2f}&#34;</span><span class="ansi-yellow-intense-fg ansi-bold">.</span>format<span class="ansi-yellow-intense-fg ansi-bold">(</span>i<span class="ansi-yellow-intense-fg ansi-bold">+</span><span class="ansi-cyan-intense-fg ansi-bold">1</span><span class="ansi-yellow-intense-fg ansi-bold">,</span> price<span class="ansi-yellow-intense-fg ansi-bold">)</span><span class="ansi-yellow-intense-fg ansi-bold">)</span>
-
-<span class="ansi-red-intense-fg ansi-bold">NameError</span>: name &#39;reg&#39; is not defined</pre>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Predicted selling price for Client 1&#39;s home: $391,183.33
+Predicted selling price for Client 2&#39;s home: $189,123.53
+Predicted selling price for Client 3&#39;s home: $942,666.67
+</pre>
 </div>
 </div>
 
@@ -14196,6 +14172,19 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#38382;&#39064; 10 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-10---&#22238;&#31572;&#65306;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>建议价格：<br/>客户1：\$391,183.33&lt;br/&gt;客户2：\$189,123.53<br/>客户3：\$942,666.67</li>
+<li>合理，因为参考平均值、中值、最大值、最小值，数据没有异常。</li>
+<li>从每个房屋的房间总数、社区贫困指数和邻近学校的学生-老师比例这些信息来看，这样的价格也是合理的。</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14216,17 +14205,36 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO Calculate the r2 score between &#39;y_true&#39; and &#39;y_predict&#39;</span>
 
-<span class="n">r2</span> <span class="o">=</span> <span class="bp">None</span>
+<span class="n">predicted</span> <span class="o">=</span> <span class="n">reg</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+<span class="n">r2</span> <span class="o">=</span> <span class="n">performance_metric</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">predicted</span><span class="p">)</span>
 
 <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Optimal model has R^2 score {:,.2f} on test data&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">r2</span><span class="p">))</span>
 </pre></div>
 
 </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Optimal model has R^2 score 0.77 on test data
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -14252,6 +14260,17 @@ AElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>还可以</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#27169;&#22411;&#20581;&#22766;&#24615;">&#27169;&#22411;&#20581;&#22766;&#24615;<a class="anchor-link" href="#&#27169;&#22411;&#20581;&#22766;&#24615;">&#182;</a></h3><p>一个最优的模型不一定是一个健壮模型。有的时候模型会过于复杂或者过于简单，以致于难以泛化新增添的数据；有的时候模型采用的学习算法并不适用于特定的数据结构；有的时候样本本身可能有太多噪点或样本过少，使得模型无法准确地预测目标变量。这些情况下我们会说模型是欠拟合的。</p>
 <h3 id="&#38382;&#39064;-12---&#27169;&#22411;&#20581;&#22766;&#24615;">&#38382;&#39064; 12 - &#27169;&#22411;&#20581;&#22766;&#24615;<a class="anchor-link" href="#&#38382;&#39064;-12---&#27169;&#22411;&#20581;&#22766;&#24615;">&#182;</a></h3><p>模型是否足够健壮来保证预测的一致性？</p>
 <p><strong>提示</strong>: 执行下方区域中的代码，采用不同的训练和测试集执行 <code>fit_model</code> 函数10次。注意观察对一个特定的客户来说，预测是如何随训练数据的变化而变化的。</p>
@@ -14261,7 +14280,7 @@ AElFTkSuQmCC
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">vs</span><span class="o">.</span><span class="n">PredictTrials</span><span class="p">(</span><span class="n">features</span><span class="p">,</span> <span class="n">prices</span><span class="p">,</span> <span class="n">fit_model</span><span class="p">,</span> <span class="n">client_data</span><span class="p">)</span>
@@ -14271,12 +14290,52 @@ AElFTkSuQmCC
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Trial 1: $391,183.33
+Trial 2: $411,417.39
+Trial 3: $415,800.00
+Trial 4: $420,622.22
+Trial 5: $423,300.00
+Trial 6: $411,931.58
+Trial 7: $390,250.00
+Trial 8: $414,430.43
+Trial 9: $402,531.82
+Trial 10: $413,700.00
+
+Range in prices: $33,050.00
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#38382;&#39064; 12 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-12---&#22238;&#31572;&#65306;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>结果浮动的不是特别大，都是在40万左右的价格。模型足够健壮来保证预测的一致性。</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -14301,6 +14360,20 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#38382;&#39064; 13 - &#22238;&#31572;&#65306;<a class="anchor-link" href="#&#38382;&#39064;-13---&#22238;&#31572;&#65306;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>依然适用，反映出房价的一些规律，有参考价值。</li>
+<li>不能，例如房屋的装修、新旧等都会影响房屋的价格，但是数据中并没有这些特征。</li>
+<li>不能，不同的城市差异性可能会很大。</li>
+<li>不合理，房屋所在社区的环境只是判断价值的一个因素。</li>
+</ul>
+
 </div>
 </div>
 </div>
