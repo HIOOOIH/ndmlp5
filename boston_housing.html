@@ -13890,7 +13890,7 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>网格搜索法：设置一组模型，它们的参数值彼此不同，并且它们位于网格上。然后训练每个模型并使用交叉验证对其进行评估。然后选择一个效果最好的。</li>
+<li>网格搜索法：设置一个模型或算法，比如DecisionTreeRegressor，然后给出这个模型需要搜索的参数列表和参数值，组成参数组合再搜索。使用交叉验证对其进行评估。然后选择一个效果最好的。</li>
 </ul>
 
 </div>
@@ -13925,7 +13925,7 @@ AElFTkSuQmCC
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><strong>K折交叉验证法</strong>：把数据集平均分成k份，一份被保留作为验证模型的数据，其他K-1份用来训练。交叉验证重复K次，每个k份验证一次，平均K次的结果，最终得到一个单一估测。</li>
+<li><strong>K折交叉验证法</strong>：将训练集的所有数据平均划分成K份（通常选择K=10）,取第K份作为验证集，余下的K-1份作为交叉验证的训练集。交叉验证重复K次，每个k份验证一次，平均K次的结果，最终得到一个单一估测。</li>
 </ul>
 <hr>
 <ul>
@@ -13938,7 +13938,7 @@ AElFTkSuQmCC
 </ul>
 </li>
 <li><strong>网格搜索为什么要使用K折交叉验证？K折交叉验证能够避免什么问题？</strong><ul>
-<li>给出准确的评分，帮助网格搜索选择参数。</li>
+<li>给出准确的评分，帮助网格搜索选择参数。K折交叉验证的好处是可以从有限的数据中获取尽可能多的有效信息，从多个角度去学习，能够避免陷入局部的极值。</li>
 </ul>
 </li>
 </ul>
@@ -14180,9 +14180,10 @@ Predicted selling price for Client 3&#39;s home: $942,666.67
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>建议价格：<br/>客户1：\$391,183.33&lt;br/&gt;客户2：\$189,123.53<br/>客户3：\$942,666.67</li>
-<li>合理，因为参考平均值、中值、最大值、最小值，数据没有异常。</li>
-<li>从每个房屋的房间总数、社区贫困指数和邻近学校的学生-老师比例这些信息来看，这样的价格也是合理的。</li>
+<li>建议价格：</li>
+<li>客户1：\$391,183.33，从特征来看，客户2&lt;客户1&lt;客户3，价格界于两者之间是合理的。</li>
+<li>客户2：\$189,123.53，房间总数最少，贫困指数最大，学生/老师比例最大，教育资源比较差，价格是三个客户中最低的是合理的。</li>
+<li>客户3：\$942,666.67，房间总数最多，贫困指数最小，学生/老师比例最小，教育资源最优，房价最高合理。</li>
 </ul>
 
 </div>
